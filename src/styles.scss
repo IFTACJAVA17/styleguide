@@ -1,0 +1,85 @@
+@import './partials/typography';
+@import './partials/colors';
+@import './partials/basics';
+
+html, body {
+    margin: 0;
+    font-size: 16px;
+    background-color: $secondary-color;
+    color: $white-color;
+}
+
+p {
+  text-align: left;
+}
+
+code {
+  background-color: darken($primary-color, 20%);
+  color: $white-color;
+  padding: 2px 8px;
+}
+
+#App {
+    min-height: 100vh;
+  }
+  
+  #page-wrap {
+    text-align: center;
+    max-width: 980px;
+    padding-bottom: 5em;
+    margin: auto;
+    overflow: hidden;
+    padding: 2em;
+  }
+  
+  .bm-item {
+    display: inline-block;
+  
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: $white-color;
+    transition: color .2s;
+  }
+  
+  .bm-item:hover {
+    color: darken($white-color, 10%);
+  }
+  
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+  }
+  
+  .bm-burger-bars {
+    background: $accent-color;
+  }
+  
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .bm-cross {
+    background: $white-color;
+  }
+  
+  .bm-menu {
+    background: darken($secondary-color, 10%);
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+  
+  .bm-morph-shape {
+    fill: #373a47;
+  }
+  
+  .bm-item-list {
+    color: $white-color;
+  }
+  
+  .bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+  }

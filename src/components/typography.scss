@@ -1,0 +1,54 @@
+@import '../partials/colors';
+@import '../partials/typography';
+
+
+#typography {
+    margin-top: 5em;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid lighten($black-color, 55%);
+    margin-top: 1em;
+
+    & .headingInfo {
+        
+        & > h1 {
+            color: lighten($black-color, 45%);
+            text-transform: lowercase;
+            margin-bottom: $bl / 5;
+        }
+
+        & > h2 {
+            color: lighten($black-color, 45%);
+            text-transform: lowercase;
+            margin-bottom: $bl / 5;
+        }
+        
+        & > h3 {
+            color: lighten($black-color, 45%);
+            text-transform: lowercase;
+            margin-bottom: $bl / 5;
+        }
+        
+        & > h4 {
+            color: lighten($black-color, 45%);
+            text-transform: lowercase;
+            margin-bottom: $bl / 5;
+        }
+    }
+}
+
+.paragraph {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & .paragraphInfo > p {
+        color: lighten($black-color, 45%);
+    }
+}
+
+

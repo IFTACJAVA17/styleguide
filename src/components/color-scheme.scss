@@ -1,0 +1,106 @@
+@import '../partials/colors';
+@import '../partials/typography';
+
+#colors {
+    margin-top: 5em;
+}
+
+.colorSwatchContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-evenly;
+    overflow: visible;
+
+    .row {
+        margin-left: 0;
+    }
+}
+
+.colorSwatch {
+    height: 435px;
+    width: 190px;
+    display: block;
+    margin: 5px;
+    border-radius: 5px;
+
+    & h5 {
+        margin-bottom: $bl / 2;
+        text-align: center;
+        line-height: 1.8rem;
+        
+    }
+
+    & p {
+        text-align: center;
+    }
+}
+
+.info {
+    position: relative;
+    top: 45%;
+}
+
+.primary {
+    background-color: $primary-color;
+    color: $black-color;
+
+    & h5 {
+        color: $black-color
+    }
+}
+
+.secondary {
+    background-color: $secondary-color;
+    color: $white-color;
+    border: 1px solid $white-color;
+
+    & h5 {
+        color: $white-color
+    }
+}
+
+.accent {
+    background-color: $accent-color;
+    color: $black-color;
+    
+    & h5 {
+        color: $black-color
+    }
+}
+
+.accent-light {
+    background-color: $accent-light-color;
+    color: $black-color;
+
+    & h5 {
+        color: $black-color;
+    }
+}
+
+.accent-dark {
+    background-color: $accent-dark-color;
+    color: $white-color;
+
+    & h5 {
+        color: $white-color;
+    }
+}
+
+.white {
+    background-color: $white-color;
+    color: $black-color;
+
+    & h5 {
+        color: $black-color
+    }
+}
+
+.black {
+    background-color: $black-color;
+    color: $white-color;
+
+    & h5 {
+        color: $white-color
+    }
+}
