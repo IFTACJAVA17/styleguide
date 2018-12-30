@@ -1,0 +1,106 @@
+@import '../../partials/colors';
+@import '../../partials/typography';
+
+#colors {
+    margin-top: 5em;
+}
+
+.colorSwatchContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-evenly;
+    overflow: visible;
+
+    .row {
+        margin-left: 0;
+    }
+}
+
+.colorSwatch {
+    height: 435px;
+    width: 190px;
+    display: block;
+    margin: 5px;
+    border-radius: 5px;
+
+    & h5 {
+        margin-bottom: $bl / 2;
+        text-align: center;
+        line-height: 1.8rem;
+        
+    }
+
+    & p {
+        text-align: center;
+    }
+}
+
+.info {
+    position: relative;
+    top: 45%;
+}
+
+.admin-primary {
+    background-color: $primary-admin-color;
+    color: $black-color;
+
+    & h5 {
+        color: $black-admin-color
+    }
+}
+
+.admin-secondary {
+    background-color: $secondary-admin-color;
+    color: $white-color;
+    border: 1px solid $white-color;
+
+    & h5 {
+        color: $white-admin-color
+    }
+}
+
+.admin-accent {
+    background-color: $accent-admin-color;
+    color: $black-color;
+    
+    & h5 {
+        color: $black-admin-color
+    }
+}
+
+.admin-accent-light {
+    background-color: $accent-light-admin-color;
+    color: $black-admin-color;
+
+    & h5 {
+        color: $black-admin-color;
+    }
+}
+
+.admin-accent-dark {
+    background-color: $accent-dark-admin-color;
+    color: $white-admin-color;
+
+    & h5 {
+        color: $white-admin-color;
+    }
+}
+
+.admin-white {
+    background-color: $white-admin-color;
+    color: $black-admin-color;
+
+    & h5 {
+        color: $black-admin-color
+    }
+}
+
+.admin-black {
+    background-color: $black-admin-color;
+    color: $white-admin-color;
+
+    & h5 {
+        color: $white-admin-color
+    }
+}
