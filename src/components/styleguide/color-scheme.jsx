@@ -1,12 +1,82 @@
 import React from 'react';
+import ColorSchemeBasic from './colorSchemeThemes/color-scheme-basic';
+import ColorSchemeVivid from './colorSchemeThemes/color-scheme-vivid';
+import ColorSchemeMuted from './colorSchemeThemes/color-scheme-muted';
+import  {Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 import './color-scheme.scss';
 
 class ColorScheme extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.pickBasic = this.pickBasic.bind(this);
+        this.pickVivid = this.pickVivid.bind(this);
+        this.pickMuted = this.pickMuted.bind(this);
+        this.state = {
+            dropdownOpen: false,
+            theme: 'basic'
+        };
+    }
+
+    toggle() {
+        this.setState(prevState => ({
+            dropdownOpen : !prevState.dropdownOpen
+        }));
+    }
+
+    pickBasic() {
+        this.setState({
+            theme: 'basic'
+        })
+    }
+
+    pickVivid() {
+        this.setState({
+            theme: 'vivid'
+        })
+    }
+
+    pickMuted() {
+        this.setState({
+            theme: 'muted'
+        })
+    }
+
+    renderTheme() {
+        if(this.state.theme === 'basic') {
+            return (
+                <ColorSchemeBasic />
+            );
+        } if(this.state.theme === 'vivid') {
+            return (
+                <ColorSchemeVivid />
+            )
+        } if(this.state.theme === 'muted') {
+            return (
+                <ColorSchemeMuted />
+            )
+        }
+        else {
+            return null;
+        }
+    }
+
     render () {
         return (
             <div id="colors">
+                <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                    <DropdownToggle className="text-black themePicker" caret>
+                        Välj tema
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        <DropdownItem onClick={this.pickBasic}>Theme 'Basic'</DropdownItem>
+                        <DropdownItem onClick={this.pickVivid}>Theme 'Vivid'</DropdownItem>
+                        <DropdownItem onClick={this.pickMuted}>Theme 'Muted'</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
                 <h2>Färger</h2>
                 <p>Färgerna bör användas med dom specificerade variablerna.
                     Detta för att enkelt kunna applicera nya teman.
@@ -14,68 +84,7 @@ class ColorScheme extends React.Component {
                     bakgrund <code>.bg-primary</code> och 
                     text <code>.text-primary</code> för varje färg.
                 </p>
-                <div className="colorSwatchContainer">
-                <div className="row">
-                    <div className="colorSwatch primary">
-                        <div className="info">
-                            <h5>Malachite</h5>
-                            <p>Primärfärg <br />
-                            #68CB85 <br />
-                            <code>$primary-color</code></p>
-                        </div>
-                    </div>
-                    <div className="colorSwatch secondary">
-                        <div className="info">
-                            <h5>Imperial</h5>
-                            <p>Sekundärfärg <br />
-                            #193F72<br />
-                            <code>$secondary-color</code></p>
-                        </div>
-                    </div>
-                    <div className="colorSwatch accent">
-                        <div className="info">
-                            <h5>New York</h5>
-                            <p>Accentfärg <br />
-                            #D77F7E <br />
-                            <code>$accent-color</code></p>
-                        </div>
-                    </div>
-                    <div className="colorSwatch accent-light">
-                        <div className="info">
-                            <h5>Vanilla</h5>
-                            <p>Accentfärg - ljus <br />
-                            #F6EAAC <br />
-                            <code>$accent-light-color</code></p>
-                        </div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="colorSwatch accent-dark">
-                        <div className="info">
-                            <h5>Lavender</h5>
-                            <p>Accentfärg - mörk <br />
-                            #82529A <br />
-                            <code>$accent-dark-color</code></p>
-                        </div>
-                    </div>
-                    <div className="colorSwatch white">
-                        <div className="info">
-                            <h5>Azureish white</h5>
-                            <p>Vitt <br />
-                            #E1E8F0 <br />
-                            <code>$white-color</code></p>
-                        </div>
-                    </div>
-                    <div className="colorSwatch black">
-                        <div className="info">
-                            <h5>Eerie black</h5>
-                            <p>Svart <br />
-                            #1D1E1E <br />
-                            <code>$black-color</code></p>
-                        </div>
-                    </div>    
-                </div>
-            </div>
+                {this.renderTheme()}
             </div>
         )
     }
