@@ -1,0 +1,46 @@
+@import '../../partials/colors';
+@import '../../partials/typography';
+
+#colors {
+    margin-top: 5em;
+}
+
+.colorSwatchContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-evenly;
+    overflow: visible;
+
+    .row {
+        margin-left: 0;
+    }
+}
+
+.colorSwatch {
+    height: 435px;
+    width: 190px;
+    display: block;
+    margin: 5px;
+    border-radius: 5px;
+
+    & h5 {
+        margin-bottom: $bl / 2;
+        text-align: center;
+        line-height: 1.8rem;
+        
+    }
+
+    & p {
+        text-align: center;
+    }
+}
+
+.themePicker {
+    float:right;
+    background-color: $primary-color !important;
+
+    &:hover {
+        background-color: darken($primary-color, 10%) !important;
+    }
+}

@@ -1,0 +1,17 @@
+@import '../partials/colors';
+@import '../partials/typography';
+
+.card-body {
+    margin-top: 50px;
+    background-color: $primary-color;
+    font-size: $bl;
+    color: $black-color;
+}
+
+.left{
+    margin-left: 250px;
+}
+
+.right{
+    margin-right: 250px;
+}

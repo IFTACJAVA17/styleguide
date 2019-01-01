@@ -11,15 +11,15 @@ class Forms extends React.Component {
             <h2>Formulär</h2>
                 <Form>
                     <FormGroup>
-                    <label for="input">Input</label>
+                    <label htmlFor="input">Input</label>
                     <input type="text" className="form-control"
                     name="input" placeholder="input" />
                     <br/>
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" className="form-control" 
                     name="password" placeholder="password"/>
                     <br />
-                    <label for="select">Select</label>
+                    <label htmlFor="select">Select</label>
                     <select className="form-control"
                     name="select">
                         <option>1</option>
