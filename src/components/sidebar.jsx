@@ -4,7 +4,7 @@ import { slide as Menu } from 'react-burger-menu';
 export default props => {
     return (
 
-        <Menu width= {'200px'} isOpen noOverlay>
+        <Menu width= {'200px'} noOverlay>
         <a className="menu-item" href="/">
             Home
         </a>
