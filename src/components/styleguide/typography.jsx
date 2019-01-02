@@ -51,13 +51,13 @@ class Typography extends React.Component {
                 </div>
                 <div>
                     <h3>Brödtext</h3>
-                    <p>Typsnitt för brödtext är Sintoy, satt i 16px med en <code>line-height</code> satt till 1.8 rem.</p>
+                    <p>Typsnitt för brödtext är Sintony, satt i 16px med en <code>line-height</code> satt till 1.8 rem.</p>
                     <div className="paragraph">
                         <div className="paragraphText">
                             <p>Yxmördaren Julia Blomqvist på fäktning i Schweiz.</p>
                         </div>
                         <div className="paragraphInfo">
-                            <p>Sintoy - 16px / 1,8rem</p>
+                            <p>Sintony - 16px / 1,8rem</p>
                         </div>
                     </div>
                 </div>

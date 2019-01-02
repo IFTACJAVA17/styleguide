@@ -1,17 +1,26 @@
-@import './partials/typography';
-@import './partials/colors';
+@import './typography';
+@import './colors';
 
-.text-primary {
+  .text-primary {
     color: $primary-color !important;
+  }
+
+  .text-admin-primary {
+    color: $primary-admin-color !important;
   }
   
   .bg-primary {
     background-color: $primary-color !important;
   }
+
+  .bg-admin-primary {
+    background-color: $primary-admin-color !important;
+  }
   
   .text-secondary {
     color: $secondary-color !important;
   }
+  
   
   .bg-secondary {
     background-color: $secondary-color !important;

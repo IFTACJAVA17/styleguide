@@ -1,68 +1,84 @@
 import React from 'react';
 
-import './color-scheme.scss';
+const primaryStyle = {
+    backgroundColor: '#E8C7DE',
+    color: '#1E1E1E'
+};
 
-class ColorScheme extends React.Component {
+const secondaryStyle = {
+    backgroundColor: '#69626D',
+    color: '#F4F4F4'
+}
+
+const accentStyle = {
+    backgroundColor: '#9CA7BC',
+    color: '#1E1E1E'
+}
+
+const accentLightStyle = {
+    backgroundColor: '#DFC9CF',
+    color: '#1E1E1E'
+}
+
+const accentDarkStyle = {
+    backgroundColor: '#94AA9C',
+    color: '#1E1E1E'
+}
+
+
+class ColorSchemeMuted extends React.Component {
 
     render () {
         return (
-            <div id="colors">
-                <h2>Färger</h2>
-                <p>Färgerna bör användas med dom specificerade variablerna.
-                    Detta för att enkelt kunna applicera nya teman.
-                    Det finns klasser för att applicera färgen som 
-                    bakgrund <code>.bg-primary</code> och 
-                    text <code>.text-primary</code> för varje färg.
-                </p>
                 <div className="colorSwatchContainer">
                 <div className="row">
-                    <div className="colorSwatch primary">
+                    <div className="colorSwatch" style={primaryStyle}>
                         <div className="info">
-                            <h5>Malachite</h5>
+                            <h5 style={primaryStyle}>Queen Pink</h5>
                             <p>Primärfärg <br />
-                            #68CB85 <br />
+                            #E8C7DE <br />
                             <code>$primary-color</code></p>
                         </div>
                     </div>
-                    <div className="colorSwatch secondary">
+                    <div className="colorSwatch" style={secondaryStyle}>
                         <div className="info">
-                            <h5>Imperial</h5>
+                            <h5 style={secondaryStyle}>Dim gray</h5>
                             <p>Sekundärfärg <br />
-                            #193F72<br />
+                            #69626D<br />
                             <code>$secondary-color</code></p>
                         </div>
                     </div>
-                    <div className="colorSwatch accent">
+                    <div className="colorSwatch" style={accentStyle}>
                         <div className="info">
-                            <h5>New York</h5>
+                            <h5 style={accentStyle}>Pewter Blue</h5>
                             <p>Accentfärg <br />
-                            #D77F7E <br />
+                            #9CA7BC <br />
                             <code>$accent-color</code></p>
                         </div>
                     </div>
-                    <div className="colorSwatch accent-light">
+                    <div className="colorSwatch" style={accentLightStyle}>
                         <div className="info">
-                            <h5>Vanilla</h5>
+                            <h5 style={accentLightStyle}>Dust Storm</h5>
                             <p>Accentfärg - ljus <br />
-                            #F6EAAC <br />
+                            #DFC9CF <br />
                             <code>$accent-light-color</code></p>
                         </div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="colorSwatch accent-dark">
+                    <div className="colorSwatch" style={accentDarkStyle}>
                         <div className="info">
-                            <h5>Lavender</h5>
+                            <h5 style={accentDarkStyle}>Spanish Gray</h5>
                             <p>Accentfärg - mörk <br />
-                            #82529A <br />
+                            #94AA9C <br />
                             <code>$accent-dark-color</code></p>
                         </div>
                     </div>
                     <div className="colorSwatch white">
                         <div className="info">
-                            <h5>Azureish white</h5>
+                            <h5>White Smoke</h5>
                             <p>Vitt <br />
-                            #E1E8F0 <br />
+                            #F4F4F4 <br />
                             <code>$white-color</code></p>
                         </div>
                     </div>
@@ -70,15 +86,14 @@ class ColorScheme extends React.Component {
                         <div className="info">
                             <h5>Eerie black</h5>
                             <p>Svart <br />
-                            #1D1E1E <br />
+                            #1E1E1E <br />
                             <code>$black-color</code></p>
                         </div>
                     </div>    
                 </div>
             </div>
-            </div>
         )
     }
 }
 
-export default ColorScheme;
+export default ColorSchemeMuted;

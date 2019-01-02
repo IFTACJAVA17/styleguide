@@ -8,16 +8,34 @@ export default props => {
         <a className="menu-item" href="/">
             Home
         </a>
-        <a className="menu-item" href="#typography">
+        <hr />
+        <a className="menu-item" href="/style">Styleguide</a>
+        <hr className='line-margin' />
+        <a className="menu-item" href="/style/#typography">
             Typografi
         </a>
-        <a className="menu-item" href="#colors">
+        <a className="menu-item" href="/style/#colors">
             Färger
         </a>
-        <a className="menu-item" href="#buttons">
+        <a className="menu-item" href="/style/#buttons">
             Knappar
         </a>
-        <a className="menu-item" href="#forms">
+        <a className="menu-item" href="/style/#forms">
+            Formulär
+        </a>
+        <hr />
+        <a className="menu-item" href="/admin">Admin Styleguide</a>
+        <hr />
+        <a className="menu-item" href="/admin/#typography">
+            Typografi
+        </a>
+        <a className="menu-item" href="/admin/#colors">
+            Färger
+        </a>
+        <a className="menu-item" href="/admin/#buttons">
+            Knappar
+        </a>
+        <a className="menu-item" href="/admin/#forms">
             Formulär
         </a>
     </Menu>

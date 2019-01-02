@@ -1,7 +1,7 @@
-@import '../partials/colors';
+@import './colors';
 
 $headingFontStack: 'Catamaran', sans-serif;
-$bodyFontStack: 'Sintoy', sans-serif;
+$bodyFontStack: 'Sintony', sans-serif;
 
 $bl: 1.8rem;
 
@@ -44,6 +44,7 @@ h5 {
 }
 
 p {
+    font-family: $bodyFontStack;
     font-size: $bl / 1.8;
     line-height: $bl;
 }

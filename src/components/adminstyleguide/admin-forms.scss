@@ -1,0 +1,19 @@
+@import '../../partials/colors';
+
+.form-control {
+    background-color: darken($white-admin-color, 10%);
+    border-radius: 5px;
+    padding: 1em;
+    transition: all .2s ease-out;
+    color: $black-color;
+
+    &:focus {
+        background-color: $white-admin-color;
+        color: $black-admin-color;
+    }
+}
+
+label {
+    float: left;
+    color: $black-admin-color;
+}

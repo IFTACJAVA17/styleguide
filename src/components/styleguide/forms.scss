@@ -1,6 +1,8 @@
-@import '../partials/colors';
+@import '../../partials/colors';
+@import '../../partials/typography';
 
 .form-control {
+    font-family: $bodyFontStack;
     background-color: darken($white-color, 10%);
     border-radius: 5px;
     padding: 1em;
@@ -14,6 +16,7 @@
 }
 
 label {
+    font-family: $bodyFontStack;
     float: left;
-    color: $white-color;
+    color: $white-color !important;
 }
